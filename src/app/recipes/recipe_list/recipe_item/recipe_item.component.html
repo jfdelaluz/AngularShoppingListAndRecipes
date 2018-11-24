@@ -1,9 +1,11 @@
 <a href="#" class="list-group-item clearfix">
   <div class="pull-left">
-    <h4 class="list-group-item-heading">Recipe Name</h4>
-    <p class="list-group-item-text">Description</p>
+    <h4 class="list-group-item-heading">{{ recipe.name }}</h4>
+    <p class="list-group-item-text">{{ recipe.description }}</p>
   </div>
   <span class="pull-right">
-    <img src="https://api.norecipes.com/wp-content/uploads/2018/08/teriyaki-chicken-recipe_010.jpg" class="img-responsive" style="max-height : 50px;">
+    <img
+      src="{{ recipe.imagePath }}"
+      class="img-responsive recipe-image">
   </span>
 </a>
