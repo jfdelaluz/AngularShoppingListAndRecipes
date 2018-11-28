@@ -1,9 +1,9 @@
-<app-header></app-header>
+<app-header (sectionChange)="setActiveSection($event)"></app-header>
 <div class="container">
   <div class="row">
     <div class="col-md-12">
-      <app-recipes></app-recipes>
-      <app-shopping_list></app-shopping_list>
+      <app-recipes *ngIf="isRecipesSectionActive()"></app-recipes>
+      <app-shopping_list *ngIf="isShoppingListSectionActive()"></app-shopping_list>
     </div>
   </div>
 </div>
