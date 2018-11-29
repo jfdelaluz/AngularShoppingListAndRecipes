@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, Output, EventEmitter } from '@angular/core';
 
 import { Recipe } from '../recipe.model';
 
@@ -21,4 +21,9 @@ export class RecipeListComponent {
       'https://hips.hearstapps.com/del.h-cdn.co/assets/18/11/2048x1024/landscape-1520957481-grilled-salmon-horizontal.jpg?resize=1200:*'
     )
   ];
+  @Output() recipeToDisplay = new EventEmitter<Recipe>();
+
+  recipeFromList(recipe: Recipe) {
+    this.recipeToDisplay.emit(recipe);
+  }
 }
