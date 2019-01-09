@@ -2,8 +2,7 @@
 <div class="container">
   <div class="row">
     <div class="col-md-12">
-      <app-recipes *ngIf="isRecipesSectionActive()"></app-recipes>
-      <app-shopping_list *ngIf="isShoppingListSectionActive()"></app-shopping_list>
+      <router-outlet></router-outlet>
     </div>
   </div>
 </div>
